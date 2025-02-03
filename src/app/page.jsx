@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import signUp from "@/firebase/auth/signup";
 import { useRouter } from 'next/navigation'
 import { signInEmailPassword } from "@/firebase/auth/signin";
@@ -17,11 +17,13 @@ function Page() {
   const router = useRouter()
   const [formType, setFormType] = useState(type.SIGNIN)
 
+
   const handleForm = async () => {
     const email = emailRef.current.value
     const password = passwordRef.current.value
 
     const { result, err } = formType === type.SIGNUP ? await signUp(email, password) : await signInEmailPassword(email, password)
+
 
 
     if (result !== null) {
