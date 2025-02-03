@@ -9,8 +9,8 @@ export default function Page() {
   const router = useRouter()
 
   useEffect(() => {
-    if (user) {
-      console.log(user)
+    console.log(user)
+    if (!user) {
       router.push('/')
     }
   }, [user])

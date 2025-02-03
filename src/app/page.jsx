@@ -26,6 +26,7 @@ function Page() {
 
     if (result !== null) {
       authContext.setUser(result.user)
+      console.log(authContext.user)
       alert("User created successfully")
       router.push("/admin")
     }
