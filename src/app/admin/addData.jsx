@@ -4,9 +4,11 @@ import Form from "./Form";
 import { useEffect, useState } from "react";
 import { useAuthContext } from "@/context/AuthContext";
 import getDoument from "@/firebase/firestore/getData";
+import { useRouter } from "next/navigation";
 
 export default function DashBoard() {
   const { user } = useAuthContext()
+  const router = useRouter()
 
   const [data, setData] = useState([])
 
@@ -45,7 +47,17 @@ export default function DashBoard() {
   }
 
   return (
-    <div>
+    <div className="mt-2">
+      <div className="max-w-md mx-auto  flex flex-row gap-3">
+        <div className="text-2xl font-semibold mb-4">Welcome {user?.email}</div>
+        <button
+          type="button"
+          className="p-2 mb-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition"
+          onClick={() => { router.push('/') }}
+        >
+          Log out
+        </button>
+      </div>
       <Form handleForm={handleForm} />
       <Table data={data} />
     </div>

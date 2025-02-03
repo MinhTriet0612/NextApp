@@ -18,7 +18,6 @@ export default function Page() {
 
   return (
     <div>
-      <h1>Only logged in users can view this page</h1>
       <DashBoard />
     </div>
   )
