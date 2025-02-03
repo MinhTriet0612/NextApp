@@ -1,13 +1,13 @@
 import { initializeApp, getApps } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+  apiKey: "AIzaSyAvv8glL8atyPAI06I91rwdywgYHQGjzms",
+  authDomain: "nextapp-77286.firebaseapp.com",
+  projectId: "nextapp-77286",
+  storageBucket: "nextapp-77286.firebasestorage.app",
+  messagingSenderId: "107100549203",
+  appId: "1:107100549203:web:013086f920d2fa25a016a6",
+  measurementId: "G-V4YKX1R0VV"
 };
 
 // Initialize Firebase
